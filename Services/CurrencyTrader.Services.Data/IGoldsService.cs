@@ -8,6 +8,7 @@
 
         int GetCount();
 
-        T GetByName<T>(string name);
+        // T GetByName<T>(string name);
+        T GetById<T>(int id);
     }
 }

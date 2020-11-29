@@ -30,5 +30,12 @@
             };
             return this.View(viewModel);
         }
+
+        public IActionResult Detailed(int id)
+        {
+            var viewModel =
+                this.goldsService.GetById<IndexGoldViewModel>(id);
+            return this.View(viewModel);
+        }
     }
 }

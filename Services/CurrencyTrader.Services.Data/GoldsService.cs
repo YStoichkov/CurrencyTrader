@@ -26,6 +26,15 @@
             return golds;
         }
 
+        public T GetById<T>(int id)
+        {
+            var gold = this.goldsRepository.AllAsNoTracking()
+                .Where(x => x.Id == id)
+                .To<T>().FirstOrDefault();
+
+            return gold;
+        }
+
         // public IEnumerable<T> GetAll<T>(int? count = null)
         // {
         //    IQueryable<Gold> query = this.goldsRepository.All().OrderBy(x => x.Name);
@@ -36,14 +45,14 @@
 
         // return query.To<T>().ToList();
         // }
-        public T GetByName<T>(string name)
-        {
-            var currency = this.goldsRepository.All()
-                .Where(x => x.Name.Replace(" ", "-") == name.Replace(" ", "-"))
-                .To<T>().FirstOrDefault();
-            return currency;
-        }
+        // public T GetByName<T>(string name)
+        // {
+        //    var golds = this.goldsRepository.All()
 
+        // .Where(x => x.Name.Replace(" ", "-") == name.Replace(" ", "-"))
+        //        .To<T>().FirstOrDefault();
+        //    return golds;
+        // }
         public int GetCount()
         {
             return this.goldsRepository.All().Count();

@@ -15,6 +15,6 @@
 
         public string Description { get; set; }
 
-        public int MyProperty { get; set; }
+        public string Url => $"/Gold/{this.Name.Replace(' ', '-')}";
     }
 }
