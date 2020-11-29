@@ -1,0 +1,151 @@
+﻿@*//TODO ... add offices from Varna , Sofia and Plovdiv
+
+    <h1>Hello From Office View!!</h1>
+    <link href="~/css/offices.css" rel="stylesheet" asp-append-version="true" />
+    <div class="row">
+        <div class="column">
+            <img id="image" src="/img/Plovdiv.jpg" alt="Snow" style="width:100%">
+        </div>
+        <div class="column">
+            <img id="image1" src="/img/Sofia.jpg" alt="Forest" style="width:100%">
+        </div>
+        <div class="column">
+            <img id ="image2"src="/img/Varna.jpg" alt="Mountains" style="width:100%">
+        </div>
+    </div>*@
+
+<html>
+<head>
+    <style>
+        .pop-out {
+            transition: transform .5s;
+        }
+
+            .pop-out:hover {
+                -ms-transform: scale(1.5, 1.5);
+                -webkit-transform: scale(1.5, 1.5);
+                transform: scale(1.5, 1.5);
+            }
+        /*.column {
+            float: left;
+            width: 50%;
+            padding: 5px;
+        }*/
+
+        /* Clear floats after image containers */
+        /*.row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }*/
+        .row {
+            display: flex;
+        }
+
+        .column {
+            flex: 45%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="row">
+        <div class="column">
+            <button type="submit" class="btn btn-primary btn-lg btn-block" asp-area="" asp-controller="Office" asp-action="Detailed">Пловдив бул."Иван Вазов" 50 тел.: 0897 305 533</button>
+            <img src="~/img/Plovdiv.jpg" class="pop-out" style="width:100%">
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=plovdov%20ivan%20vazov%2050&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 600px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 600px;
+                }
+            </style>
+        </div>
+        <div class="column">
+            <button type="button" class="btn btn-primary btn-lg btn-block">Варна пл."Независимост" тел.: 0892 352 333</button>
+            <img src="~/img/Varna.jpg" class="pop-out" style="width:100%">
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%B2%D0%B0%D1%80%D0%BD%D0%B0%20%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%20%D0%BD%D0%B5%D0%B7%D0%B0%D0%B2%D0%B8%D1%81%D0%B8%D0%BC%D0%BE%D1%81%D1%82&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 600px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 600px;
+                }
+            </style>
+        </div>
+        <div class="column">
+            <button type="button" class="btn btn-primary btn-lg btn-block">София бул."Ал.Стамболойски" 25 тел.: 0899 111 222</button>
+            <img src="~/img/Sofia.jpg" class="pop-out" style="width:100%">
+        </div>
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=%D0%A1%D0%BE%D1%84%D0%B8%D1%8F%20%2C%20%D0%B1%D1%83%D0%BB.%20%22%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%BD%D0%B4%D1%8A%D1%80%20%D0%A1%D1%82%D0%B0%D0%BC%D0%B1%D0%BE%D0%BB%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%22%2025&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 600px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 600px;
+                }
+            </style>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    @*<img src="~/img/Plovdiv.jpg" class="pop-out" style="width:50%">
+        <div class="mapouter">
+            <div class="gmap_canvas"><iframe width="400" height="300" id="gmap_canvas" src="https://maps.google.com/maps?q=plovdov%20ivan%20vazov%2050&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com/divi-discount/"></a></div>
+            <style>
+                .mapouter {
+                    position: relative;
+                    text-align: right;
+                    height: 500px;
+                    width: 600px;
+                }
+
+                .gmap_canvas {
+                    overflow: hidden;
+                    background: none !important;
+                    height: 500px;
+                    width: 600px;
+                }
+            </style>
+        </div>
+        <img src="/img/Sofia.jpg" class="pop-out" style="width:50%">
+        <img src="/img/Varna.jpg" class="pop-out" style="width:50%">*@
+</body>
+</html>

@@ -1,0 +1,71 @@
+﻿@*@using CurrencyExchange.Common
+
+    @{ this.ViewData["Title"] = $"Welcome to {GlobalConstants.SystemName}!"; }
+
+    <div class="text-center">
+        <h1 class="display-3">@this.ViewData["Title"]</h1>
+        <cache expires-after="TimeSpan.FromDays(10)" vary-by-query="id">
+            <h1 class="display-3">@DateTime.UtcNow</h1>
+        </cache>
+        <a asp-controller="Posts" asp-action="Create" class="btn btn-primary btn-lg">Create new forum post</a>
+    </div>
+    <hr />
+    <div class="row">
+        @foreach (var category in Model.Categories)
+        {
+    <div class="col-md-4 media">
+        <img src="@category.ImageUrl" width="100" class="mr-3" alt="@category.Title">
+        <div class="media-body">
+            <h5 class="mt-0">
+                <a href="@category.Url">
+                    @category.Title (@category.PostsCount)
+                </a>
+            </h5>
+            @category.Description
+        </div>
+    </div>}
+    </div>*@
+
+
+
+
+
+<div class="card-columns">
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Работи в</h5>
+            <h4 class="card-title">позитивна атмосфера</h4>
+            <p class="card-text">Ще работиш в свежа и усмихната среда. В Tavex много обичаме добрите взаимоотношения, понеже когато ни е готино успяваме да дадем най-доброто от себе си. Колегите са прекрасни, отзивчиви и ще те подкрепят във всичко, от което имаш нужда.</p>
+        </div>
+    </div>
+    <div class="card bg-primary text-white text-center p-3">
+        <blockquote class="blockquote mb-0">
+            <p>Pulvinar leo risus vestibulum. Sed diam on sodales eget.</p>
+            <footer class="blockquote-footer text-white">
+                <small>Someone famous</small>
+            </footer>
+        </blockquote>
+    </div>
+    <div class="card text-center">
+        <div class="card-body">
+            <h5 class="card-title">Развивай се в</h5>
+            <h4 class="card-title">Амбициозна компания</h4>
+            <p class="card-text">
+                Очакват те куп интересни обучения, програми за развитие и менторски практики. Ценните знания и умения ще са ти от полза през целия професионален живот. Целта ни е да сме най-добрите на пазара и с удоволствие инвестираме в потенциала на екипа си, за да можем да растем заедно.
+            </p>
+        </div>
+    </div>
+    <div class="card p-3 text-right">
+        <div class="card-body">
+            <h5 class="card-title">Бъди част от</h5>
+            <h4 class="card-title">Удивителен екип</h4>
+            <p class="card-text">
+                Нашите служители отличават Tavex като най-добър работодател
+                през 2012, 2014, 2015, и 2017г. в анонимното проучване на
+                консултантската компания AoN Hewitt. Ако имаше титла за “Най-
+                добър екип”, ние щяхме ежегодно да им връчваме наградата!
+                Доста сме горди, че при нас работят смислени, добри и честни хора.
+            </p>
+        </div>
+    </div>
+</div>

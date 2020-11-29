@@ -1,0 +1,55 @@
+﻿
+@model CurrencyTrader.Web.ViewModels.Currency.IndexViewModel
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="table-hover">
+        <style>
+            .table tbody tr:hover td, .table tbody tr:hover th {
+                background-color: aqua
+            }
+        </style>
+        <hr />
+        <hr />
+        <table cellpadding="0" cellspacing="0" class="table">
+            <colgroup>
+                <col width="80">
+                <col width="600">
+                <col width="80">
+                <col width="110">
+                <col width="80">
+                <col width="110">
+            </colgroup>
+
+            <thead class="thead-dark">
+                <tr class="header_cells">
+                    <th class="first"></th>
+                    <th class="center">Наименование на валута</th>
+                    <th>Код</th>
+                    <th>Количество</th>
+                    <th>Купува</th>
+                    <th>Продава</th>
+                    <th class="last"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var currency in Model.Currencies)
+                {
+                    <tr class="first">
+                        <td class="center"><img src=@currency.CurrencyImage sizes="353px" /></td>
+                        <td class="align-self-lg-center"><a href="@currency.Url">@currency.CurrencyName</a></td>
+                        <td class="center">@currency.CurrencyCode</td>
+                        <td class="center">
+                            <label for="Quantity"> <input type="number" min="1" /></label>
+                        </td>
+                        <td class="center">@currency.BuyForPrice</td>
+                        <td class="last center">@currency.SellForPrice</td>
+                        <td><button type="button" class="btn btn-primary">Купи</button></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

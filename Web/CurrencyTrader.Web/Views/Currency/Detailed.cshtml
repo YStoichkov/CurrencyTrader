@@ -1,0 +1,65 @@
+﻿@model CurrencyExchange.Web.ViewModels.Currency.IndexCurrencyViewModel;
+
+<div class="grid grid--narrow-xs grid--middle-xs m-hero__meta">
+    <div class="grid__col grid__col--xs-12">
+        <a asp-controller="Currency" asp-action="Index">< Всички валути</a>
+        <div class="grid grid--narrow-xs grid--middle-xs m-hero__meta">
+            <div class="grid__col grid__col--xs-12">
+                <h1 class="m-hero__title">@Model.CurrencyName</h1>
+            </div>
+            <div class="grid__col grid__col--sm grid__col--first-xs grid__col--original-sm">
+                <div class="image  m-hero__meta-flag">
+                    <img src="@Model.CurrencyImage">
+                </div>
+
+                <abbr class="m-hero__meta-abbr">@Model.CurrencyCode</abbr>
+            </div>
+            <div class="grid__col grid__col--xs">
+                <div class="m-hero__meta-label">Kуп.</div>
+                <div class="m-hero__meta-value">@Model.BuyForPrice</div>
+            </div>
+            <div class="grid__col grid__col--xs grid__col--right-xs grid__col--no-offset-sm">
+                <div class="m-hero__meta-label">прод.</div>
+                <div class="m-hero__meta-value">@Model.SellForPrice</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<ul class="nav nav-tabs">
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#полезно">Полезно</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#валутнаТаблица">Валутна таблица</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#вОбращение">В обращение</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#любопитно">Любопитно</a>
+    </li>
+</ul>
+<div id="myTabContent" class="tab-content">
+    <div class="tab-pane fade" id="полезно">
+        <p>Home text</p>
+    </div>
+    <div class="tab-pane fade" id="валутнаТаблица">
+        <p>Profile text</p>
+    </div>
+    <div class="tab-pane fade" id="вОбращение">
+        <p>В обращение текст</p>
+    </div>
+    <div class="tab-pane fade" id="любопитно">
+        <p>Любопитно текст</p>
+    </div>
+</div>
+
+
+
+
+@*public string Name { get; set; }
+    public string CurrencyCode { get; set; }
+    public decimal BuyForPrice { get; set; }
+    public decimal SellForPrice { get; set; }
+    public string Description { get; set; }*@

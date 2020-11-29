@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<body>
+    <div class="table-hover">
+        <style>
+            .table tbody tr:hover td, .table tbody tr:hover th {
+                background-color: aqua
+            }
+        </style>
+        <hr />
+        <hr />
+        <table cellpadding="0" cellspacing="0" class="table">
+            <colgroup>
+                <col width="80">
+                <col width="600">
+                <col width="100">
+                <col width="100">
+                <col width="80">
+                <col width="110">
+            </colgroup>
+
+            <thead class="thead-dark">
+                <tr class="header_cells">
+                    <th class="first"></th>
+                    <th>Продукт</th>
+                    <th>Купуваме</th>
+                    <th>Продаваме</th>
+                    <th class="last"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @*@foreach (var currency in Model.Currencies)
+                    {
+                        <tr class="first">
+                            <td class="center"><img src=@currency.CurrencyImage sizes="353px" /></td>
+                            <td class="align-self-lg-center"><a href="@currency.Url">@currency.CurrencyName</a></td>
+                            <td class="center">@currency.CurrencyCode</td>
+                            <td class="center">
+                                <label for="Quantity"> <input type="number" min="1" /></label>
+                            </td>
+                            <td class="center">@currency.BuyForPrice</td>
+                            <td class="last center">@currency.SellForPrice</td>
+                            <td><button type="button" class="btn btn-primary">Купи</button></td>
+                        </tr>
+                    }*@
+            </tbody>
+        </table>
+    </div>
+    <nav aria-label="...">
+        <ul class="pagination justify-content-center">
+            <li class="page-item disabled">
+                <a class="page-link" href="#" tabindex="-1">Previous</a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">1</a></li>
+            <li class="page-item active">
+                <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+                <a class="page-link" href="#">Next</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

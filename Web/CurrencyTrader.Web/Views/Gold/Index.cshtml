@@ -1,0 +1,68 @@
+﻿
+@model CurrencyTrader.Web.ViewModels.Gold.IndexViewModel
+@{ 
+    this.ViewData["Title"] = "All Golds, page " + Model.PageNumber;
+}
+
+<!DOCTYPE html>
+<html>
+<body>
+    <div class="table-hover">
+        <style>
+            .table tbody tr:hover td, .table tbody tr:hover th {
+                background-color: aqua
+            }
+        </style>
+        <hr />
+        <hr />
+        <table cellpadding="0" cellspacing="0" class="table">
+            <colgroup>
+                <col width="80">
+                <col width="600">
+                <col width="80">
+                <col width="110">
+            </colgroup>
+
+            <thead class="thead-dark">
+                <tr class="header_cells">
+                    <th class="first"></th>
+                    <th>Наименование</th>
+                    <th>Купува</th>
+                    <th>Продава</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var gold in Model.Golds)
+                {
+                <tr class="first">
+                    <td class="center"><img src=@gold.ImageUrl sizes="353px" /></td>
+                    <td class="align-self-lg-center">@gold.Name</td>
+                    <td class="center"><button type="button" class="btn btn-primary">@gold.BuyForPrice лв.</button></td>
+                    <td class="center"><button type="button" class="btn btn-warning">@gold.SellForPrice лв.</button></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+
+<partial name="_PagingPartial" model="@Model" />
+
+
+<!--<-->@*nav aria-label="...">
+    <ul class="pagination justify-content-center">
+        <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1">Previous</a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item active">
+            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item">
+            <a class="page-link" href="#">Next</a>
+        </li>
+    </ul>
+</nav>*@
+
