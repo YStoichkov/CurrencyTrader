@@ -30,8 +30,7 @@
                                new CurrencySeeder(),
                                new OfficesSeeder(),
                                new GoldsSeeder(),
-
-                               // new SilversSeeder(),
+                               new SilversSeeder(),
                           };
 
             foreach (var seeder in seeders)
