@@ -76,6 +76,7 @@
 
             services.AddTransient<ICurrenciesService, CurrencyService>();
             services.AddTransient<IGoldsService, GoldsService>();
+            services.AddTransient<ISilversService, SilversService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

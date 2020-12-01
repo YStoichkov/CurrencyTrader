@@ -45,8 +45,4 @@
     <ProjectReference Include="..\CurrencyTrader.Data.Models\CurrencyTrader.Data.Models.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Migrations\" />
-  </ItemGroup>
-
 </Project>
